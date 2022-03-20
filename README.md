@@ -1,4 +1,4 @@
-# Where-to-go-this-week-end
+# Let's Gooo !
 Our first project as a group
 
 Problem:
