@@ -1,7 +1,7 @@
 # Let's Gooo !
 
 
-## The problem:
+## Challenges:
    - There’s no database to guide and help the families in order to plan their weekend especially if they have childre with different ages …
 
 - No suggestion what to do during the school vacations..
