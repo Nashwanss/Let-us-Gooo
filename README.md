@@ -29,5 +29,4 @@
 
 
 
-![GIF](https://i.gifer.com/2IwF.mp4)
-![GIF](https://i.gifer.com/75CN.gif)
+![GIF](https://i.pinimg.com/originals/f9/9e/62/f99e6267aab0d0beb193202700c454f9.gif)
