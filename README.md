@@ -34,4 +34,3 @@
 
 ## Persona:
 
-![alt](https://github.com/KaatWillems/Set-The-Bar/blob/master/Persona-marie.png)
