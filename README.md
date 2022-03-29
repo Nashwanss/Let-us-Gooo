@@ -34,4 +34,5 @@
 
 ## Persona:
 
-![alt](https://github.com/KaatWillems/Set-The-Bar/blob/master/Persona-marie.png)
+![alt](https://github.com/Nashwanss/Let-us-Gooo/blob/main/Persona%20-%20Roberto%20Carlos.png)
+

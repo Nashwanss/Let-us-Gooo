@@ -23,7 +23,7 @@ const scrapURL = async (url) => {
 	)
 	console.log(cardLinks);
 	await browser.close();
-	scrapContent(cardLinks);
+	// scrapContent(cardLinks);
 }
 
 
@@ -58,17 +58,17 @@ const scrapContent = async (urls) => {
 scrapURL(mainURL);
 
 
-// SAVE DATA TO JSON
+// // SAVE DATA TO JSON
 
-let saveDataToJson = (activity) => {
-	let newJsonData = activity
-	let dataJson = fs.readFileSync("charleroiDataArr.json");
-	let myObject = JSON.parse(dataJson);
+// let saveDataToJson = (activity) => {
+// 	let newJsonData = activity
+// 	let dataJson = fs.readFileSync("charleroiDataArr.json");
+// 	let myObject = JSON.parse(dataJson);
 
-	myObject.push(newJsonData);
+// 	myObject.push(newJsonData);
 
-	let temp = JSON.stringify(myObject);
-	fs.writeFile("charleroiDataArr.json", temp, function (err) {
-		if (err) throw err;
-	});
-}
+// 	let temp = JSON.stringify(myObject);
+// 	fs.writeFile("charleroiDataArr.json", temp, function (err) {
+// 		if (err) throw err;
+// 	});
+// }
