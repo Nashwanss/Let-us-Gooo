@@ -1,0 +1,94 @@
+<!--  ----------------------- NAV BAR --------------------------  -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Let's Gooo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor03" style="justify-content:space-between;">
+          <div>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/events">Events
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/wishlist">Wish List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact">Contact</a>
+          </li>
+        </ul>
+    </div>
+        <div>
+        <a href="/users/logout" class="btn btn-outline-dark">Logout ? </a>
+    </div>
+
+      </div>
+    </div>
+  </nav>
+ 
+
+<!-------------------------------------------------------------------------------->
+
+<div style="display: flex; justify-content: space-between;margin-right: 50px;" class="container">
+
+    <div class="rambo">
+    <img src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/01/SC-Rambo-Off-Plat-copy.jpg" style="margin-top: 20px;" width="200px" height="200px" alt=""/>
+  
+    </div>
+  
+    <div style="display: flex; flex-direction: column; margin-top: 10px;" class="userInfo">
+  
+    <input style="margin-top: 60px;" type="text" placeholder=<%=user.name%>>
+    <input style="margin-top: 10px;" type="text" placeholder=<%=user.email%>>
+    <input style="margin-top: 10px;" type="password" placeholder="*******">
+  
+  
+    </div>
+  
+  
+  
+  
+  </div>
+  
+  <div  style="height: 350px; display: flex;flex-direction: column;; margin-top: 20px; ; border: 2px solid black;" class="myFamily">
+  
+    <div style="text-align: center;">
+    <h1>My Family</h1>
+    </div>
+  
+    <div style="display: flex;flex-direction: column; justify-content: space-between;margin-left: 25px;">
+    
+    <div class="addChild">
+    <button>add a child</button>
+    </div>
+  
+    <div style="display: flex; flex-direction: column; margin-right: 900px; margin-top: 30px;display: none;" class="child">
+  
+      <input type="text" name="" id="">
+      <button style="margin-top: 10px;">save change</button>
+      <input style="margin-top: 10px" type="text" name="" id="">
+      <button style="margin-top: 10px">save change</button>
+      <input style="margin-top: 10px;" type="text" name="" id="">
+      <button style="margin-top: 10px">save change</button>
+  
+    </div>
+  
+  
+  </div>
+  
+  </div>
+  
+  <script>
+    let addChild = document.querySelector('.addChild')
+    let addNewChild = document.querySelector('.child')
+    addChild.addEventListener('click', () => {
+      addNewChild.style.display = "flex"
+    })
+  </script>
