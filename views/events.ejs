@@ -1,18 +1,43 @@
 <!--  ----------------------- NAV BAR --------------------------  -->
 
-<%- include('navBar'); %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Let's Gooo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor03" style="justify-content:space-between;">
+          <div>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/events">Events
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/wishlist">Wish List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact">Contact</a>
+          </li>
+        </ul>
+    </div>
+        <div>
+        <a href="/users/logout" class="btn btn-outline-dark">Logout ? </a>
+    </div>
+
+      </div>
+    </div>
+  </nav>
+ 
 
 <!-------------------------------------------------------------------------------->
 
-<!-- --------------------------CSS----------------------------------------------- -->
-
-<link rel="stylesheet" type="text/css" href="events.css" />
-
-<!-- ---------------------------------------------------------------------------- -->
-
-<%- include('filter'); %>
-
-<div id="eventsContainer" class="container">
+<!-- DIV FOR CARDS -->
+<div id="eventsContainer" style="display: flex;flex-wrap: wrap;" class="container">
 
   <% activities.forEach((activity) => { %>
     <% if (activity.image == 'Empty' || activity.image == 'EMPTY') {  %>
@@ -66,10 +91,12 @@
 
 </div>
 
-<!-- -------------------------- SCRIPTS ----------------------------------------------- -->
-
-<script src="filter.js"></script>
 <script>
-  checkboxLocation();
-  saveFilter();
+
+  let addToWL = document.querySelector('.plus')
+  addToWL.addEventListener('click',() => {
+    wishList.id = activities.id
+    console.log(wishList.id)
+  })
+
 </script>

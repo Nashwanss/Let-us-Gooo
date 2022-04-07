@@ -3,10 +3,9 @@ const bcrypt = require('bcryptjs');
 
 // Load User model
 const User = require('../models/User');
-
-// load activities model
+//load activites model
 const activities = require('../models/activities');
-
+const wishList = require('../models/wishlist')
 module.exports = function(passport) {
   passport.use(
     new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
