@@ -4,8 +4,15 @@
 
 <!-------------------------------------------------------------------------------->
 
-<!-- DIV FOR CARDS -->
-<div id="eventsContainer" style="display: flex;flex-wrap: wrap;" class="container">
+<!-- --------------------------CSS----------------------------------------------- -->
+
+<link rel="stylesheet" type="text/css" href="events.css" />
+
+<!-- ---------------------------------------------------------------------------- -->
+
+<%- include('filter'); %>
+
+<div id="eventsContainer" class="container">
 
   <% activities.forEach((activity) => { %>
     <% if (activity.image == 'Empty' || activity.image == 'EMPTY') {  %>
@@ -59,12 +66,10 @@
 
 </div>
 
+<!-- -------------------------- SCRIPTS ----------------------------------------------- -->
+
+<script src="filter.js"></script>
 <script>
-
-  let addToWL = document.querySelector('.plus')
-  addToWL.addEventListener('click',() => {
-    wishList.id = activities.id
-    console.log(wishList.id)
-  })
-
+  checkboxLocation();
+  saveFilter();
 </script>
