@@ -46,6 +46,4 @@ router.get("/contact", ensureAuthenticated, (req, res) =>
   })
 );
 
-
-
 module.exports = router;

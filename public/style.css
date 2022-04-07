@@ -1,0 +1,96 @@
+/* CSS FOR PROFILE */
+body {
+    background-color:#BEE3DB;
+    
+    
+}
+.bg {
+    background-color:#BEE3DB;
+}
+
+#cardContainer {
+    min-height: 500px;
+    border: none;
+}
+.userName {
+    font-size: 2rem;
+    color:black;
+}
+.userPic {
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+}
+#idForCardHeader {
+    display: flex;
+    justify-content: space-between;
+    background-color: #bee3db;
+    background-image: linear-gradient(160deg, #bee3db 0%, #555b6e 100%);
+
+
+}
+#idForCardBody{
+    display: flex;
+    flex-direction: column;
+    background-color: #bee3db;
+    background-image: linear-gradient(160deg, #bee3db 0%, #555b6e 100%);
+
+
+}
+#cardButton {
+    height: 50px;
+    border-bottom: 1px solid rgb(221, 215, 215);
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgb(202, 194, 194);
+    
+    
+}
+.accordion-button {
+    font-size: inherit;
+}
+
+.accordion-item {
+    border: 1px solid rgba(35, 65, 100, .15)
+}
+
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background: rgb(35,65,100);
+    color: #e8e8e8;
+}
+
+.accordion-button:not(.collapsed)::after  {
+    filter: brightness(00%) invert(70%);
+}
+
+.accordion-button:focus {
+    box-shadow: inherit;
+}
+
+@media (max-width: 767px) {
+    .accordion-body h3 {
+        font-size: calc(.95rem + 1.5vw);
+    }
+    #cardContainer {
+        min-height: 880px;
+    }
+}
+@media (min-width: 767px) {
+    #cardContainer {
+        min-height: 500px;
+    }
+}
+.accordion-body {
+    display: flex;
+    flex-direction: column;
+}
+.accordion-item {
+    border: none !important;
+}
+#logOut {
+    width: 100%;
+    text-align:left;
+    height:50px
+}
+/*END OF CSS FOR PROFILE*/

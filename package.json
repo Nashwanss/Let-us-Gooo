@@ -1,7 +1,7 @@
 {
-  "name": "Let's Gooo",
+  "name": "node_passport_login",
   "version": "2.0.0",
-  "description": "App for Events",
+  "description": "Node.js authentication with Passport",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -18,9 +18,8 @@
     "express": "^4.16.4",
     "express-ejs-layouts": "^2.5.0",
     "express-session": "^1.15.6",
-    "jquery": "^3.6.0",
     "mongoose": "^5.7.5",
-    "nodemailer": "^6.7.3",
+    "node": "^17.7.2",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0"
   },
