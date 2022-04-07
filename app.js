@@ -60,16 +60,14 @@ app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
 
 
+// CSS 
 
-// PUBLIC CSS
+app.use("/",express.static('public'));
+app.use("/users",express.static('public'));
 
-app.use("/",express.static('public/style'));
-app.use("/users",express.static('public/style'));
 
-// PUBLIC SCRIPTS 
 
-app.use("/",express.static('public/scripts'));
-app.use("/users",express.static('public/scripts'));
+
 
 
 const PORT = process.env.PORT || 5000;
