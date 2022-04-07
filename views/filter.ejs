@@ -1,0 +1,75 @@
+
+<div class="classTestBorder">
+  <div class="container singleCol">
+    <div class="accordion accordion-flush " id="accordionExample">
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+          id="btnFilter"
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <h4>Filter Cards</h4>
+            <div id="filterSaved"></div>
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+              <select class="form-select" aria-label="Default select example" id="targetAge">
+                  <option selected>Target Age</option>
+                  <option value="Children 6-9 yr.">Children 6 - 9</option>
+                  <option value="Children 6-12 yr.">Children 6 - 12</option>
+                  <option value="Children 12-18 yr.">Children 12 - 18</option>
+                  <option value="adult">adult</option>
+                  <option value="sernior">sernior</option>
+                  <option value="everyone">everyone</option>
+                </select>
+  
+                <fieldset class="form-group">
+                  <legend class="mt-4" id="location">Radio buttons</legend>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="filter by location" checked="">
+                      filter by location 
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="City name">
+                      Enter a city name
+                    </label>
+                        <input type="text" class="form-control" placeholder="Enter Location" id="inputDefault" style="display:none">
+                  </fieldset>
+
+                  <a class="btn btn-outline-dark" id="saveFilter">Save filter</a>
+                  <a class="btn btn-outline-dark" id="eraseFilter">Erase filter</a>
+
+
+
+                  
+          </div>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  
