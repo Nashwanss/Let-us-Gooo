@@ -6,7 +6,7 @@
 
 <!-- --------------------------CSS----------------------------------------------- -->
 
-<link rel="stylesheet" type="text/css" href="events.css" />
+<!-- <link rel="stylesheet" type="text/css" href="events.css" /> -->
 
 <!-- ---------------------------------------------------------------------------- -->
 
@@ -23,9 +23,9 @@
 
       
       <% } else { %>    
-      <div class="card bg-light mb-3" style="width: 21rem; height: 30rem; border-radius: 5px">
-        <div class="card-header" style="overflow: hidden; height: 2.4rem">
-          <h5 class="title innerCard"><%= activity.name %></h5>
+      <div class="card bg-light mb-3" style="width: 21rem; height: 30rem; border-radius: 5px" id="<%= activity._id %>">
+        <div class="card-header" style="overflow: hidden; height: 3.5rem;">
+          <h5 class="title innerCard" styl="line-height: 200px;"><%= activity.name %></h5>
         </div>
         <div class="card-image" style="display: flex;justify-content: center;padding-top: 10px;padding-bottom: 10px;">  
           <img src="<%= activity.image %>" style="max-width: 21rem; max-height: 9rem; border-radius: 5px"/>
@@ -57,7 +57,7 @@
             <a href="<%= activity.website %>">
             <button class="seeMoreBtn btn btn-info">See More</button>
             </a>
-            <button class="plus btn btn-info">Add To WL</button>
+            <button class="plus btn btn-info" id="addWishList">Add To WL</button>
           </div>
         </div>
       </div>
@@ -68,8 +68,14 @@
 
 <!-- -------------------------- SCRIPTS ----------------------------------------------- -->
 
+
 <script src="filter.js"></script>
+<script src="addToWishList.js"></script>
 <script>
   checkboxLocation();
   saveFilter();
+</script>
+
+<script>
+    btnWishList();
 </script>
