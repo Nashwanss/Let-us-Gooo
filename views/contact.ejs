@@ -3,31 +3,31 @@
 <%- include('navBar'); %>
 
 <!-------------------------------------------------------------------------------->
+<script src = email.js></script>
+
 
 <div class="contactPage">
+
   <div class="form-group">
-    <label for="exampleInputEmail1" class="form-label mt-4"
-      >Email address</label
-    >
-    <input
-      type="email"
-      class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
-      placeholder="Enter email"
-    />
-    <small id="emailHelp" class="form-text text-muted"
-      >We'll never share your email with anyone else.</small
-    >
+    <label for="inputName" class="form-label mt-4">Name</label>
+    <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter your name" value="<%= user.name %>"/>
   </div>
 
   <div class="form-group">
-    <label for="exampleTextarea" class="form-label mt-4"
-      >Example textarea</label
-    >
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    <label for="inputEmail" class="form-label mt-4">Email</label>
+    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter your email" value="<%= user.email %>"/>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="form-group">
+    <label for="msg" class="form-label mt-4">Message</label>
+    <textarea class="form-control" id="msg" rows="3" placeholder="Entre your message"></textarea>
+  </div>
 
-</div>
+  <div id="messageSuccess"></div>
+
+  <button type="submit" class="btn btn-primary" onclick='sendMail()'>Submit</button>
+
+
+  </div>
+
+
