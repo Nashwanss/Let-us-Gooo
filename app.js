@@ -14,12 +14,16 @@ require('./config/passport')(passport);
 const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
-mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true ,useUnifiedTopology: true}
+mongoose.connect(db,
+  { 
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    // useFindAndModify: false,
+    // useCreateIndex: true,
+    // autoIndex: false,
+    }
   )
-  .then(() => console.log('MongoDB Connected'))
+  .then(() => console.log('You are connected to Mongo DB'))
   .catch(err => console.log(err));
 
 // EJS
@@ -58,6 +62,8 @@ app.use(function(req, res, next) {
 // Routes
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
+app.use('/profiles', require('./routes/profiles.js'));
+app.use('/children', require('./routes/children.js'));
 
 
 // CSS 
