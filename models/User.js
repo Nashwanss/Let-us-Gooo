@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const ProfileSchema = require('./Profile').ProfileSchema
+
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -16,9 +18,11 @@ const UserSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
-  }
+  },
+  profile: ProfileSchema
 });
 
 const User = mongoose.model('User', UserSchema);
 
 module.exports = User;
+
