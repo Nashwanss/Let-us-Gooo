@@ -1,16 +1,17 @@
 /* CSS FOR PROFILE */
-body {
-    background-color:#BEE3DB;
-    
-    
-}
+
 .bg {
-    background-color:#BEE3DB;
+    background: #bee3db !important;
+    /* font-family: 'Grape Nuts', cursive;
+    font-family: 'Work Sans', sans-serif; */
 }
 
 #cardContainer {
     min-height: 500px;
+    background-color: none !important;
     border: none;
+    /* width:100vw;
+    margin-right: 1000px; */
 }
 .userName {
     font-size: 2rem;
@@ -24,19 +25,24 @@ body {
 #idForCardHeader {
     display: flex;
     justify-content: space-between;
-    background-color: #bee3db;
-    background-image: linear-gradient(160deg, #bee3db 0%, #555b6e 100%);
+    background-color: white;
+    border-radius: 5px;
+    /* background-color: #bee3db; */
+    /* background-image: linear-gradient(160deg, #bee3db 0%, #555b6e 100%); */
 
 
 }
-#idForCardBody{
-    display: flex;
-    flex-direction: column;
-    background-color: #bee3db;
-    background-image: linear-gradient(160deg, #bee3db 0%, #555b6e 100%);
+/* #idForCardBody{
+
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* width:100vw; */
+    /* align-items: center;
+    justify-content:center; */
+    
 
 
-}
+/* } */
 #cardButton {
     height: 50px;
     border-bottom: 1px solid rgb(221, 215, 215);
@@ -93,192 +99,19 @@ body {
     text-align:left;
     height:50px
 }
+
+
+.user-header {
+    height: 12vh;
+    background: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#accordionExample {
+    margin-top:20px;
+}
 /*END OF CSS FOR PROFILE*/
-
-
-
-/* --------- css martin ------------ */ 
-
-*{
-    font-family:'Courier New', Courier, monospace;
-}
-
-body {
-    background-color: #BEE3DB;
-    width: 100vw;
-}
-
-.btn {
-    font-family:'Courier New', Courier, monospace;
-    /* border:0px; */
-    background-color:#BEE3DB;
-    color:black;
-}
-
-.btn:hover {
-    background-color:#5c706b;
-
-}
-
-.btn:active {
-    background-color:#2a3331;
-
-}
-
-.container::-webkit-scrollbar {
-    display:none;
-}
-
-.container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-
-/* -------------------- accordion ---------------------- */
-
-/* .singleCol {
-    max-width: 750px;
-    margin: 0 auto;
-} */
-
-.accordion-button {
-    font-size: inherit;
-}
-
-.accordion-item {
-    border: 1px solid rgba(35, 65, 100, .15)
-}
-
-.accordion-button:not(.collapsed) {
-    color: inherit;
-    background:#ffffff;
-    color: #BEE3DB;
-}
-
-.accordion-button:not(.collapsed)::after  {
-    filter: brightness(00%) invert(70%);
-}
-
-.accordion-button:focus {
-    box-shadow: inherit;
-}
-
-@media (max-width: 767px) {
-    .accordion-body h3 {
-        font-size: calc(.95rem + 1.5vw);
-    }
-}
-
-.container .singleCol {
-    padding:0px !important;
-    /* padding-bottom: 15px !important; */
-    padding-top: 15px !important;
-
-}
-
-
-/* -------------- test ------------------*/ 
-
-.classTestBorder {
-    background-color:white;
-    border-radius: 5px;
-    padding-bottom: 15px;
-    margin-top: 15px;
-}
-
-.accordion-button  {
-    padding: 0px 15px 0px 15px;
-}
-
-
-/* -------------- events ------------------*/
-
-
-@media screen and (max-width : 768px) { 
-    #eventsContainer {
-        justify-content:center;
-    }
-
-    .separator {
-        display : none;
-    }
-}
-
-@media screen and (min-width : 768px) {
-    #eventsContainer {
-        justify-content:space-between;
-    }
-
-}
-
-
-
-
-
-#eventsContainer {
-    display:flex;
-    flex-wrap: wrap;
-    /* justify-content:space-between; */
-    padding-top:15px;
-    
-    
-}
-
-.btn {
-    /* color: rgba(0,0,0,.7); */
-}
-
-/* ---- ---------- NAVBAR --------------*/
-
-@media screen and (max-width : 991px) { 
-    .separator {
-        display : none;
-    }
-}
-
-.nav-link:hover {
-    /* font-size: 20px; */
-    /* color: #BEE3DB; */
-}
-
-.navbar {
-    border-radius: 0px 0px 5px 5px;
-}
-
-
-.navbar-nav > li.active {
-    /* text-shadow: 0px 0px 3px  black; */
-    /* border: 1px; */
-    /* color: #87a6a0; */
-
-}
-
-/* ----------------- welcome log reg ----------------- */
-
-
-body {
-    background-color:#BEE3DB
-    
-}
-
-.card.card-body {
-    border-radius: 25px;
-    /* box-shadow: 0px 0px 50px #78918b;
-    box-shadow: inset 10px 10px #78918b; */
-    /* box-shadow: inset 0 0 10px #78918b, 0 0 25px #78918b; */
-    border: 1px;
-}
-
-.navbar-brand {
-    font-family:"Pirate of the Seaside Bubbles";
-}
-
-.titleLogo {
-
-}
-
-
-
-
 

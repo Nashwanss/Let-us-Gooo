@@ -1,0 +1,14 @@
+#registerMain {
+    width:60vw;
+    height:100vh
+}
+@media (max-width:768px) {
+    #registerMain {
+        width:90vw;
+        height:100vh
+    }
+}
+#registerBtn {
+    background-color:#BEE3DB ;
+    border: none !important;
+}

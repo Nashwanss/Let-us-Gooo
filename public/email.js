@@ -1,40 +1,40 @@
-const nodemailer = require("nodemailer");
 
+function sendMail(params) {
 
+  if (document.getElementById("msg").value == ''){
+    let divScs = document.getElementById("messageSuccess");
+  divScs.innerHTML = `
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    Please enter a message
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+  </div>
+  `;
 
-let btn = document.getElementById("btnSubmit");
-btn.addEventListener("click", () => {
+  } else {
 
-    var transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: "Let.Gooo.Becode@gmail.com",
-          pass: "Letgooo123",
-        },
-      });
-    
-      var mailOptions = {
-        from: "youremail@gmail.com",
-        to: "Let.Gooo.Becode@gmail.com",
-        subject: "Sending Email using Node.js",
-        text: "That was easy!",
-      };
-    
-      transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("Email sent: " + info.response);
-        }
-      });
+  let tempParams = {
+    from_name: document.getElementById("inputName").value,
+    from_email: document.getElementById("inputEmail").value,
+    message: document.getElementById("msg").value,
+  };
+  emailjs.send("gmail", "template_gek8ti9", tempParams).then(function (res) {
+    console.log("success", res.status);
+  });
 
+  let divScs = document.getElementById("messageSuccess");
+  divScs.innerHTML = `
+  <div class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+  <strong>Thanks you for contact us ! </strong> Your email has been sent successfully.
+  </div>
+  `;
 
-})
+  document.getElementById("msg").value = '';
 
+}
 
-
-
-
-
-
-
+}
