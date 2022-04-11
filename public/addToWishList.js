@@ -7,14 +7,14 @@ const addToWishList = () => {
     btnAddWish.forEach((btn) => {
 
   btn.addEventListener("click", function(cardClicked) {
-    console.log(cardClicked.path[3].id);
-    let activityId = cardClicked.path[3].id;
+   
     let userId = document.querySelector('#userId').dataset.userid;
+    let activityId = cardClicked.target.dataset.activityid;
     let wishList = {
       activityId: activityId,
       userId: userId
     };
-    console.log(wishList);
+   
     fetch("/wishlist", {
       method: "POST",
       headers: {
