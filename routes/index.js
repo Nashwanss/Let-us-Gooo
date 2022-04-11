@@ -4,7 +4,7 @@ const { ensureAuthenticated, forwardAuthenticated } = require("../config/auth");
 const Activities = require("../models/activities");
 
 // Welcome Page
-router.get("/", forwardAuthenticated, (req, res) => res.render("welcome"));
+router.get("/", forwardAuthenticated, (req, res) => res.render("login"));
 
 // // Dashboard
 // router.get('/dashboard', ensureAuthenticated, (req, res) =>

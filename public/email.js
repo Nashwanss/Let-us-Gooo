@@ -37,6 +37,3 @@ function sendMail(params) {
 }
 
 }
-
-
-
