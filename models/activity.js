@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // Activity Schema
 
 const activitiesSchema = new mongoose.Schema({
-    _id: { type: String, unique: true },
+
     name: { type: String, required: true },
     about: { type: String, required: true },
     image: { type: String, unique: true },
@@ -14,6 +14,6 @@ const activitiesSchema = new mongoose.Schema({
     suitableAge: { type: String, required: true },
 });
 
-const activities = mongoose.model('activities', activitiesSchema);
+const Activity = mongoose.model('Activity', activitiesSchema);
 
-module.exports = activities;
+module.exports = Activity;

@@ -1,3 +1,4 @@
+
 function sendMail(params) {
 
   if (document.getElementById("msg").value == ''){
