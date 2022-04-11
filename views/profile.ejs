@@ -38,19 +38,26 @@
             <div class="accordion-body">
               <h1>My info</h1>
 
-                <form action="/profiles/new" method="POST">
-                  <label> First Name</label>
-                  <input style="margin-top:5px" type="text" name="firstName"><br>
-                  <label> Last Name</label>
-                  <input  style="margin-top:5px" type="text" name="lastName"><br>
-                  <label> Age</label>
-                  <input  style="margin-top:5px" type="number" name="age"><br>
-                  <label> City </label>
-                  <input  style="margin-top:5px" type="text" name="location"><br>
-                  <label> Picture </label>
-                  <input  style="margin-top:5px" type="text" name="picture"><br>
-                  <input  style="margin-top:5px" type="submit" id="submit-btn" class="btn btn-success" value="save" style="width: 350px">
-                </form>
+              <form action="/profiles/new" method="POST">
+                <label> First Name</label>
+                <input type="text" name="firstName"><br>
+                <label> Last Name</label>
+                <input type="text" name="lastName"><br>
+                <label> Age</label>
+                <input type="number" name="age"><br>
+                <label> City </label>
+                <input type="text" name="location"><br>
+                <label> Picture </label>
+                <input type="text" name="picture"><br>
+                <input 
+                  type="submit" 
+                  id="profile-save-changes-btn" 
+                  value="Save changes">
+              </form>
+
+            
+
+
             </div>
           </div>
         </div>
@@ -64,8 +71,18 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-             <input style="width: 200px;" type="text" placeholder="put the name of your child">
-             <input style="width: 200px;margin-top:10px" type="text" placeholder="put the age of your child">
+
+
+
+              <form action="/children/new" method="POST">
+                <label> Kid's Name</label>
+                <input type="text" name="childName" id="childName" />
+                <label> Kid's Age</label>
+                <input type="number" name="childAge"  id="childAge" />
+                <input type="submit" id="add-btn" value="add">
+              </form>
+
+              
              
              <div style="display: flex;margin-top: 10px; border: none; ">
               <button style="width: 200px; " class="btn btn-success" id="saveChild">save</button>
@@ -170,4 +187,3 @@
 </div>
 </div>
       
-<script src="script.js"></script>

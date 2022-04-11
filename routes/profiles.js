@@ -33,7 +33,7 @@ router.post("/new", async (req, res) => {
     res.redirect("/events");
   } catch (err) {
     console.log(err);
-    res.redirect("/dashboard");
+    res.redirect("/profile");
   }
 });
 
