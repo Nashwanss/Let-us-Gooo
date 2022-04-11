@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="event.css" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-
 <!-- ---------------------------------------------------------------------------- -->
 
 <%- include('filter'); %>
@@ -59,7 +58,7 @@
             <a href="<%= activity.website %>">
             <button class="seeMoreBtn btn btn-info">See More</button>
             </a>
-            <button class="plus btn btn-info">Add To WL</button>
+            <button class="plus btn btn-info" id="addWishList">Add To WL</button>
           </div>
         </div>
       </div>
@@ -70,8 +69,14 @@
 
 <!-- -------------------------- SCRIPTS ----------------------------------------------- -->
 
+
 <script src="filter.js"></script>
+<script src="addToWishList.js"></script>
 <script>
   checkboxLocation();
   saveFilter();
+</script>
+
+<script>
+    btnWishList();
 </script>
