@@ -6,7 +6,7 @@
 
 <!-- --------------------------CSS----------------------------------------------- -->
 
-<link rel="stylesheet" type="text/css" href="events.css" />
+<!-- <link rel="stylesheet" type="text/css" href="events.css" /> -->
 
 <!-- ---------------------------------------------------------------------------- -->
 
@@ -18,46 +18,42 @@
     <% if (activity.image == 'Empty' || activity.image == 'EMPTY') {  %>
       
     <%} else if (activity.suitableAge == '' || activity.suitableAge == 'EMPTY') { %> 
-
       <%} else if (activity.suitableAge == null ) { %> 
-
       
       <% } else { %>    
-      <div class="card bg-light mb-3" style="width: 21rem; height: 30rem; border-radius: 5px">
-        <div class="card-header" style="overflow: hidden; height: 2.4rem">
-          <h5 class="title innerCard"><%= activity.name %></h5>
+      <div class="card bg-light mb-3" style="width: 21rem; height: 30rem; border-radius: 5px" id="<%= activity._id %>">
+        <div class="card-header" style="overflow: hidden; height: 3.5rem;">
+          <h5 class="title innerCard" styl="line-height: 200px;"><%= activity.name %></h5>
         </div>
         <div class="card-image" style="display: flex;justify-content: center;padding-top: 10px;padding-bottom: 10px;">  
           <img src="<%= activity.image %>" style="max-width: 21rem; max-height: 9rem; border-radius: 5px"/>
         </div>
         <div class="card-body" style="overflow: hidden; height: 300px; padding-top: 0px">
-
           <div class="dates innerCard" style="font-size: 10px">
             <%= activity.Date %>
           </div>
-
           <div class="descriptionContent innerCard" style="overflow: hidden; max-height: 4rem; font-size: 14px">
               <b>Description : </b>
               <%= activity.about %>
           </div>
-
           <div class="price innerCard" style="font-size: 12px">
               <b>Price : </b>
               <%= activity.price %>
           </div>
-
           <div class="price innerCard" style="font-size: 12px">
               <b>Target : </b>
             <%= activity.suitableAge %>
           </div>
         </div>
-        
+
+        <div id="userId" style="display: none;" data-userId="<%=user._id%>"></div>
+
         <div class="card-btn" style="padding: 15px">
           <div class="button" style="display: flex; justify-content: space-around">
             <a href="<%= activity.website %>">
             <button class="seeMoreBtn btn btn-info">See More</button>
             </a>
-            <button class="plus btn btn-info">Add To WL</button>
+            <button class="plus btn btn-info" id="addWishList">Add To WL</button>
           </div>
         </div>
       </div>
@@ -68,8 +64,14 @@
 
 <!-- -------------------------- SCRIPTS ----------------------------------------------- -->
 
+
 <script src="filter.js"></script>
+<script src="/addToWishList.js"></script>
 <script>
   checkboxLocation();
   saveFilter();
+</script>
+
+<script>
+//
 </script>

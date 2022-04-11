@@ -24,6 +24,8 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-plugin-vue": "^8.6.0",
     "nodemon": "^1.18.9"
   }
 }
