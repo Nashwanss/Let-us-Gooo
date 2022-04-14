@@ -53,3 +53,29 @@ const addToWishList = () => {
 addToWishList();
 // btnWishList();
 
+const removeFromWishList = () => {
+  let btnRemoveWish = document.querySelectorAll("#removeWishList");
+
+    btnRemoveWish.forEach((btn) => {
+
+  btn.addEventListener("click", function(cardClicked) {
+   
+    let userId = document.querySelector('#userId').dataset.userid;
+    let wlId = cardClicked.target.dataset.wlid;
+    console.log(cardClicked.target.dataset.wlid);
+    
+    fetch(`/wishlist/${wlId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+      })
+      .catch(err => console.log(err))
+  })});
+}
+
+removeFromWishList()
