@@ -4,7 +4,7 @@
 
   <!-------------------------------------------------------------------------------->
 
-  <div id="eventsContainer" class="container" style="display: flex;flex-wrap: wrap;justify-content:space-between;margin-top: 15px;">
+  <div id="eventsContainer" class="container">
 
     <% activities.forEach((activity) => { %>
       <% if (activity.image == 'Empty' || activity.image == 'EMPTY') {  %>
@@ -45,7 +45,7 @@
               <a href="<%= activity.website %>">
               <button class="seeMoreBtn btn btn-info">See More</button>
               </a>
-              <!--<button class="plus btn btn-info" id="addWishList">Add To WL</button>-->
+              <button class="plus btn btn-info" id="removeWishList" data-wlid="<%= activity.wlid %>">remove from WL</button>
             </div>
           </div>
         </div>
@@ -53,4 +53,4 @@
     <% }) %>
   
   </div>
-  <script src="/public/addToWishList.js"></script>
+  <script src="/addToWishList.js"></script>

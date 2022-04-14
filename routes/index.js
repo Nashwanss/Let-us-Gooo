@@ -48,7 +48,11 @@ console.log(profile)
 console.log("PROFILE", profile);
 
 let activities = await Wishlist.find({profile: profile}).populate('activity')
-activities = activities.map((elt) => elt.activity);
+activities = activities.map((elt) => {
+  wlElt = elt.activity
+  wlElt.wlid = elt.id
+  return wlElt
+});
 //const activities = wlelements.map(async (wle) => await Activities.findById(wle.activity));
 console.log("ACTIVITIES", activities);
 
@@ -82,6 +86,20 @@ router.get("/contact", ensureAuthenticated, (req, res) =>
   })
 );
 
+router.delete("/wishlist/:id", async (req, res) => {
+  const id = req.params.id;
+  console.log("AAAAAAAAAA",req.params)
+  const wishlistElement = await Wishlist.findById(id);
+ 
+ 
+ try{
+  await wishlistElement.remove();
+  res.json({ msg: "Wishlist element removed" });
+
+ }catch(e){
+  res.json({ error: e });
+}
+});
 
 
 
