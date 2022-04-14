@@ -56,9 +56,9 @@
         <div class="card-btn" style="padding: 15px">
           <div class="button" style="display: flex; justify-content: space-around">
             <a href="<%= activity.website %>">
-            <button class="seeMoreBtn btn btn-info">See More</button>
+            <button class="seeMoreBtn btn btn-info" style="background-color: #555B6E; border:none;color: white">See More</button>
             </a>
-            <button class="plus btn btn-info" id="addWishList">Add To WL</button>
+            <button style="background-color: #AC3931; border:none;color: white" class="plus btn btn-info" id="addWishList" data-activityId="<%=activity._id%>" >Add To WL</button>
           </div>
         </div>
       </div>
@@ -71,6 +71,7 @@
 
 
 <script src="filter.js"></script>
+<script src="event.js"></script>
 
 <script src="addToWishList.js"></script>
 
